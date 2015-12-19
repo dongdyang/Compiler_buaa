@@ -1,0 +1,56 @@
+const
+	SIZE = 5;
+	
+var
+	list : array[10] of integer;
+	
+	
+procedure swap(var a,b : integer);	
+	var t : integer;
+	begin
+		t := a;
+		a := b;
+		b := t
+	end;
+	
+procedure sort;
+	var
+		i,j : integer;
+		
+	begin
+		for i := SIZE-1 downto 1 do
+			for j := 0 to i - 1 do
+				if list[j] > list[j+1] then
+				begin
+					swap(list[j],list[j+1]);
+				end
+	end;
+	
+procedure readList;
+	var
+		i,t : integer;
+		
+	begin
+		for i := 0 to SIZE-1 do
+		begin
+			read(t);
+			list[i] := t
+		end
+	end;
+	
+procedure writeList;
+	var
+		i : integer;
+	begin
+		for i := 0 to SIZE-1 do
+		begin
+			write(" ",list[i])
+		end
+	end;
+	
+begin
+	readList;
+	sort;
+	writeList;
+end
+.

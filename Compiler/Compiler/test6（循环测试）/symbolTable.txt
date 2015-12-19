@@ -1,0 +1,10 @@
+index name kind value address paranum isVec
+------------------------
+0	z	4	0	0	0	0
+1	head	8	0	0	0	0
+2	foot	8	0	0	0	0
+3	cock	8	0	0	0	0
+4	rabbit	8	0	0	0	0
+5	n	8	0	0	0	0
+6	i	8	0	0	0	0
+7	main	2	0	0	0	0

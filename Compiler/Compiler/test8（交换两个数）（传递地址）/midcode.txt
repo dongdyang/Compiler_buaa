@@ -1,0 +1,47 @@
+		const	,int	,5	,size
+		const	,int	,100	,max
+		int	,  	,  	,x1
+		int	,  	,  	,x2
+		int	,  	,  	,x3
+		char	,  	,  	,c1
+		char	,  	,  	,c2
+		inta	,0	,10	,list
+
+
+		func	,void	,  	,swap
+		para	,int	,var	,a
+		para	,int	,var	,b
+		int	,  	,  	,t
+		begin	,  	,  	,swap
+		=	,a	,  	,t
+		=	,b	,  	,a
+		=	,t	,  	,b
+		end	,  	,  	, 
+
+
+		func	,void	,  	,swap2
+		para	,int	,  	,a
+		para	,int	,  	,b
+		int	,  	,  	,t
+		begin	,  	,  	,swap2
+		=	,a	,  	,t
+		=	,b	,  	,a
+		=	,t	,  	,b
+		end	,  	,  	, 
+
+
+		func	,  	,  	,main
+		begin	,  	,  	,  
+		=	,10	,  	,x1
+		=	,5	,  	,x2
+		fupa	,  	,  	,x1
+		fupa	,  	,  	,x2
+		call	,swap2	,  	,  
+		wt	,x1:	,x1	,int
+		wt	,x2:	,x2	,int
+		fupa	,  	,  	,x1
+		fupa	,  	,  	,x2
+		call	,swap	,  	,  
+		wt	,x1:	,x1	,int
+		wt	,x2:	,x2	,int
+		end	,  	,  	, 

@@ -1,0 +1,56 @@
+		const	,int	,5	,size
+		const	,int	,100	,max
+		int	,  	,  	,x1
+		int	,  	,  	,x2
+		int	,  	,  	,x3
+		char	,  	,  	,c1
+		char	,  	,  	,c2
+		inta	,0	,10	,list
+
+
+		func	,int	,  	,gcd
+		para	,int	,  	,a
+		para	,int	,  	,b
+
+
+		func	,int	,  	,mod
+		para	,int	,  	,a
+		para	,int	,  	,b
+		begin	,  	,  	,mod
+		/	,a	,b	,$_0
+		*	,$_0	,b	,$_1
+		-	,a	,$_1	,$_2
+		ret	,  	,  	,$_2
+		end	,  	,  	, 
+		begin	,  	,  	,gcd
+		*	,a	,b	,$_0
+		==	,$_0	,0	,  
+		jne	,  	,  	,_LABEL_0
+		+	,a	,b	,$_1
+		ret	,  	,  	,$_1
+		jmp	,  	,  	,_LABEL_1
+		lab:	,  	,  	,_LABEL_0
+		fupa	,  	,  	,a
+		fupa	,  	,  	,b
+		call	,mod	,  	,$_2
+		fupa	,  	,  	,b
+		fupa	,  	,  	,a
+		call	,mod	,  	,$_3
+		fupa	,  	,  	,$_2
+		fupa	,  	,  	,$_3
+		call	,gcd	,  	,$_4
+		ret	,  	,  	,$_4
+		lab:	,  	,  	,_LABEL_1
+		end	,  	,  	, 
+
+
+		func	,  	,  	,main
+		begin	,  	,  	,  
+		wt	,gcd test begin!	,	,int
+		rd	,  	,  	,x1
+		rd	,  	,  	,x2
+		fupa	,  	,  	,x1
+		fupa	,  	,  	,x2
+		call	,gcd	,  	,$_0
+		wt	,	,$_0	,int
+		end	,  	,  	, 

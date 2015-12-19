@@ -1,0 +1,36 @@
+		int	,  	,  	,a
+
+
+		func	,void	,  	,p
+		int	,  	,  	,b
+
+
+		func	,void	,  	,q
+		int	,  	,  	,c
+		begin	,  	,  	,q
+		=	,2	,  	,c
+		wt	,	,c	,int
+		+	,2	,3	,$_0
+		+	,$_0	,4	,$_1
+		-	,$_1	,1	,$_2
+		*	,5	,6	,$_3
+		*	,$_3	,1	,$_4
+		+	,$_2	,$_4	,$_5
+		/	,3	,2	,$_6
+		/	,$_6	,3	,$_7
+		+	,$_5	,$_7	,$_8
+		+	,$_8	,1	,$_9
+		=	,$_9	,  	,b
+		end	,  	,  	, 
+		begin	,  	,  	,p
+		call	,q	,  	,  
+		wt	,	,b	,int
+		rd	,  	,  	,a
+		end	,  	,  	, 
+
+
+		func	,  	,  	,main
+		begin	,  	,  	,  
+		call	,p	,  	,  
+		wt	,	,a	,int
+		end	,  	,  	, 

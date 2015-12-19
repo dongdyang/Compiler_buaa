@@ -1,0 +1,111 @@
+		const	,int	,5	,size
+		inta	,0	,10	,list
+
+
+		func	,void	,  	,swap
+		para	,int	,var	,a
+		para	,int	,var	,b
+		int	,  	,  	,t
+		begin	,  	,  	,swap
+		=	,a	,  	,t
+		=	,b	,  	,a
+		=	,t	,  	,b
+		end	,  	,  	, 
+
+
+		func	,void	,  	,sort
+		int	,  	,  	,i
+		int	,  	,  	,j
+		begin	,  	,  	,sort
+		-	,size	,1	,$_0
+		>=	,$_0	,1	,  
+		jne	,  	,  	,_LABEL_1
+		=	,$_0	,  	,i
+		lab:	,  	,  	,_LABEL_0
+		>=	,i	,1	,  
+		jne	,  	,  	,_LABEL_1
+		-	,i	,1	,$_1
+		<=	,0	,$_1	,  
+		jne	,  	,  	,_LABEL_3
+		=	,0	,  	,j
+		lab:	,  	,  	,_LABEL_2
+		<=	,j	,$_1	,  
+		jne	,  	,  	,_LABEL_3
+		geta	,list	,j	,$_2
+		+	,j	,1	,$_3
+		geta	,list	,$_3	,$_4
+		>	,$_2	,$_4	,  
+		jne	,  	,  	,_LABEL_4
+		geta	,list	,j	,$_5
+		+	,j	,1	,$_6
+		geta	,list	,$_6	,$_7
+		fupa	,  	,  	,$_5
+		fupa	,  	,  	,$_7
+		call	,swap	,  	,  
+		jmp	,  	,  	,_LABEL_5
+		lab:	,  	,  	,_LABEL_4
+		lab:	,  	,  	,_LABEL_5
+		<	,j	,$_1	,  
+		jne	,  	,  	,_LABEL_3
+		+	,j	,1	,$_8
+		=	,$_8	,  	,j
+		jmp	,  	,  	,_LABEL_2
+		lab:	,  	,  	,_LABEL_3
+		>	,i	,1	,  
+		jne	,  	,  	,_LABEL_1
+		-	,i	,1	,$_9
+		=	,$_9	,  	,i
+		jmp	,  	,  	,_LABEL_0
+		lab:	,  	,  	,_LABEL_1
+		end	,  	,  	, 
+
+
+		func	,void	,  	,readlist
+		int	,  	,  	,i
+		int	,  	,  	,t
+		begin	,  	,  	,readlist
+		-	,size	,1	,$_0
+		<=	,0	,$_0	,  
+		jne	,  	,  	,_LABEL_7
+		=	,0	,  	,i
+		lab:	,  	,  	,_LABEL_6
+		<=	,i	,$_0	,  
+		jne	,  	,  	,_LABEL_7
+		rd	,  	,  	,t
+		[]=	,list	,i	,t
+		<	,i	,$_0	,  
+		jne	,  	,  	,_LABEL_7
+		+	,i	,1	,$_1
+		=	,$_1	,  	,i
+		jmp	,  	,  	,_LABEL_6
+		lab:	,  	,  	,_LABEL_7
+		end	,  	,  	, 
+
+
+		func	,void	,  	,writelist
+		int	,  	,  	,i
+		begin	,  	,  	,writelist
+		-	,size	,1	,$_0
+		<=	,0	,$_0	,  
+		jne	,  	,  	,_LABEL_9
+		=	,0	,  	,i
+		lab:	,  	,  	,_LABEL_8
+		<=	,i	,$_0	,  
+		jne	,  	,  	,_LABEL_9
+		geta	,list	,i	,$_1
+		wt	, 	,$_1	,int
+		<	,i	,$_0	,  
+		jne	,  	,  	,_LABEL_9
+		+	,i	,1	,$_2
+		=	,$_2	,  	,i
+		jmp	,  	,  	,_LABEL_8
+		lab:	,  	,  	,_LABEL_9
+		end	,  	,  	, 
+
+
+		func	,  	,  	,main
+		begin	,  	,  	,  
+		call	,readlist	,  	,  
+		call	,sort	,  	,  
+		call	,writelist	,  	,  
+		end	,  	,  	, 

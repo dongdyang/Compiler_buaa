@@ -1,0 +1,29 @@
+		const	,int	,100	,length
+		const	,char	,101	,tmp
+		int	,  	,  	,x
+		int	,  	,  	,y
+		inta	,0	,10	,a
+
+
+		func	,  	,  	,main
+		begin	,  	,  	,  
+		[]=	,a	,0	,10
+		[]=	,a	,1	,length
+		geta	,a	,0	,$_0
+		geta	,a	,1	,$_1
+		+	,$_0	,$_1	,$_2
+		=	,$_2	,  	,x
+		geta	,a	,1	,$_3
+		geta	,a	,0	,$_4
+		/	,$_3	,$_4	,$_5
+		=	,$_5	,  	,y
+		wt	,100	,	,int
+		wt	,	,x	,int
+		wt	,	,y	,int
+		geta	,a	,0	,$_6
+		wt	,	,$_6	,int
+		geta	,a	,1	,$_7
+		wt	,	,$_7	,int
+		wt	,	,length	,int
+		wt	,	,tmp	,int
+		end	,  	,  	, 

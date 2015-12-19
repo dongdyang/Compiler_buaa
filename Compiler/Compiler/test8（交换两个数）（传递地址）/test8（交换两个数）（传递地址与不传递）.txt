@@ -1,0 +1,36 @@
+const
+	SIZE = 5, MAX = 100;
+	
+var
+	x1,x2,x3 : integer;
+	c1,c2 : char;
+	list : array[10] of integer;
+	
+procedure swap(var a,b : integer);
+var t : integer;
+begin
+	t := a;
+	a := b;
+	b := t
+end;
+	
+procedure swap2(a,b : integer);
+var t : integer;
+begin
+	t := a;
+	a := b;
+	b := t
+end;	
+	
+begin
+
+x1:=10;
+x2:=5;
+swap2(x1,x2);
+write("x1:",x1);
+write("x2:",x2);
+swap(x1,x2);
+write("x1:",x1);
+write("x2:",x2);
+end
+.

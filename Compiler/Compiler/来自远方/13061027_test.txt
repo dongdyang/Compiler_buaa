@@ -1,0 +1,88 @@
+const limit = 100;
+var arr:array[100] of integer;
+n:integer;
+
+procedure Swap(var n1, n2:integer);
+	var temp:integer;
+begin
+	temp := n1;
+	n1 := n2;
+	n2 := temp
+end;
+
+procedure QuickSort(from,til:integer);
+	var ft,re:integer;
+		key:integer;
+		c:integer;
+begin
+	ft := from;
+	re := til;
+	Swap(arr[(ft + re) / 2], arr[ft]);
+	key := arr[ft];
+	if ft <> re then
+		do
+		begin
+			do
+				if ft <> re then
+					if arr[re] >= key then
+					begin
+					  re := re - 1;
+					  c := 1
+					end
+					else
+					  c := 0
+				else
+				  c := 0
+			while c = 1;
+			arr[ft] := arr[re];
+			
+			do
+				if ft <> re then
+					if arr[ft] <= key then
+					begin
+					  ft := ft + 1;
+					  c := 1
+					end
+					else
+					  c := 0
+				else
+				  c := 0
+			while c = 1;
+			arr[re] := arr[ft]
+		end
+		while ft <> re;
+		
+	arr[ft] := key;
+	
+	if from < ft - 1 then
+		QuickSort(from, ft - 1);
+	if til > re + 1 then
+		QuickSort(re + 1, til)
+end;
+
+function MyRead(limit:integer):integer;
+	var n, i, temp:integer;
+begin
+	read(n);
+	if n > limit then
+		n := limit;
+	for i := 0 to n - 1 do
+	begin
+		read(temp);
+		arr[i] := temp;
+	end;
+	MyRead := n
+end;
+
+procedure Print(cnt:integer);
+var i:integer;
+begin
+	for i := 0 to cnt - 1 do
+		write(" ", arr[i])
+end;
+
+begin
+	n := MyRead(limit);
+	QuickSort(0, n - 1);
+	Print(n)
+end.

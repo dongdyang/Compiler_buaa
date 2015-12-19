@@ -1,0 +1,28 @@
+		const	,int	,0	,ch
+		int	,  	,  	,x
+
+
+		func	,int	,  	,test
+		para	,int	,  	,a
+		begin	,  	,  	,test
+		>	,a	,1	,  
+		jne	,  	,  	,_LABEL_0
+		-	,a	,1	,$_0
+		fupa	,  	,  	,$_0
+		call	,test	,  	,$_1
+		*	,a	,$_1	,$_2
+		ret	,  	,  	,$_2
+		jmp	,  	,  	,_LABEL_1
+		lab:	,  	,  	,_LABEL_0
+		ret	,  	,  	,a
+		lab:	,  	,  	,_LABEL_1
+		end	,  	,  	, 
+
+
+		func	,  	,  	,main
+		begin	,  	,  	,  
+		rd	,  	,  	,x
+		fupa	,  	,  	,x
+		call	,test	,  	,$_0
+		wt	,x! = 	,$_0	,int
+		end	,  	,  	, 

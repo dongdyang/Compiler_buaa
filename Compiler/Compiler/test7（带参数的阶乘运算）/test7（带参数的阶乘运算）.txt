@@ -1,0 +1,16 @@
+const ch=0;
+var x:integer;
+
+function test(a:integer):integer;
+	begin
+		if a > 1 then 
+			test := a * test(a - 1)
+		else	
+			test := a
+	end
+;
+begin
+	read(x);
+	write("x! = ",test(x));
+end
+.

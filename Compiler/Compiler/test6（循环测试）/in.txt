@@ -1,0 +1,31 @@
+const z=0;
+var head,foot,cock,rabbit,n,i:integer;
+begin
+	n:=z;
+	read(head,foot);
+	cock:=1;
+	rabbit:=head;
+	for i:=0 to 10 do
+		write(" ",i)
+	;
+		
+	for i:=0 to 10 do
+	begin
+		write(" ",i);
+	end
+	;
+	
+	do
+		begin
+			rabbit:=rabbit-cock;
+			if rabbit>foot then
+				begin
+					write(rabbit);
+				end
+			else
+				write("nothing!");
+		end
+	while rabbit >= head-5
+	;
+end
+.

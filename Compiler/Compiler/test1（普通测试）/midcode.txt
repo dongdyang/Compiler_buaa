@@ -1,0 +1,27 @@
+		const	,int	,10	,d
+		int	,  	,  	,a
+		int	,  	,  	,b
+		int	,  	,  	,c
+
+
+		func	,void	,  	,swap
+		begin	,  	,  	,swap
+		=	,3	,  	,a
+		wt	,3	,a	,int
+		end	,  	,  	, 
+
+
+		func	,  	,  	,main
+		begin	,  	,  	,  
+		call	,swap	,  	,  
+		rd	,  	,  	,a
+		rd	,  	,  	,c
+		+	,a	,c	,$_0
+		=	,$_0	,  	,c
+		>	,c	,15	,  
+		jne	,  	,  	,_LABEL_0
+		wt	,the result of c is :	,c	,int
+		jmp	,  	,  	,_LABEL_1
+		lab:	,  	,  	,_LABEL_0
+		lab:	,  	,  	,_LABEL_1
+		end	,  	,  	, 

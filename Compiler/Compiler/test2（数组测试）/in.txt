@@ -1,0 +1,19 @@
+const length=100,tmp='e';
+
+var x,y:integer;
+	a : array[10] of integer;
+
+begin
+	a[0]:=10;
+	a[1]:=length;
+	x:=a[0]+a[1];
+	y:=a[1]/a[0];
+	write("100");
+	write(x);
+	write(y);
+	write(a[0]);
+	write(a[1]);
+	write(length);
+	write(tmp);
+end
+.

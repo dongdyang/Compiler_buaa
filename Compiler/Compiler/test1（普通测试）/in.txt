@@ -1,0 +1,16 @@
+CONST d=10;
+var a,b,c:integer;
+proCEdure swap;
+	begin
+		a := 3;
+		write("3",a)
+	end
+;
+begin
+ swap;
+ read(a,c);
+ c:=a+c;
+ if c>15 then
+	wrIte("the result of c is :",c)
+end
+.
