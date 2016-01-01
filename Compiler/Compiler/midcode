@@ -1,0 +1,27 @@
+		int	,  	,  	,b
+		int	,  	,  	,result
+
+
+		func	,int	,  	,gcd
+		para	,int	,  	,a
+		para	,int	,  	,b
+		para	,int	,  	,cc
+		int	,  	,  	,c
+		int	,  	,  	,d
+		begin	,  	,  	,gcd
+		wt	,	,a	,int
+		wt	,	,b	,int
+		wt	,	,cc	,int
+		ret	,  	,  	,3
+		end	,  	,  	, 
+
+
+		func	,  	,  	,main
+		begin	,  	,  	,  
+		fupa	,  	,  	,5
+		fupa	,  	,  	,10
+		fupa	,  	,  	,6
+		call	,gcd	,  	,$_0
+		+	,$_0	,b	,$_1
+		=	,$_1	,  	,result
+		end	,  	,  	, 

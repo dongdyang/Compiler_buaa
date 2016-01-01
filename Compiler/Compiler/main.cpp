@@ -7,7 +7,7 @@ FILE* src;
 ofstream lexrst, midcoderst, asmrst, symtablehis;
 
 int main(int argc, char **argv) {
-	char filename[500] = "in.txt";
+	char filename[500] = "in";
 	printf("输入文件名称（默认读取目录下的in.txt文件,若为默认直接回车):\n");
 	char tempsrc[500];
 	gets_s(tempsrc);//C11标准
@@ -22,9 +22,9 @@ int main(int argc, char **argv) {
 	}
 	fopen_s(&src, filename, "r");
 	printf("成功读入\n");
-	lexrst.open("lexrst.txt");
-	midcoderst.open("midcode.txt");
-	symtablehis.open("symbolTable.txt");
+	lexrst.open("lexrst");
+	midcoderst.open("midcode");
+	symtablehis.open("symbolTable");
 	asmrst.open("rst.asm");
 	if (src == NULL)
 	{

@@ -56,7 +56,7 @@ int getsym() {
 	if (isalpha(ch)) {
 		//必须要以字母开头
 		while (isalpha(ch) || isdigit(ch)) {
-			ch = tolower(ch);
+			//ch = tolower(ch);
 			id += ch;
 			getch();
 		}

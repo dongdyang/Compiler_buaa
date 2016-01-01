@@ -317,7 +317,7 @@ void program() {
 		//复合语句里是没有常量和变量的声明的
 		varcnt = 0;        //临时变量重新开始计数
 		//这里其实是需要加入一条指令表示函数的开始操作！？
-		char* tmp;
+		char* tmp = NULL;
 		//strcpy(name, "funcmain");
 		if (synlevel == 0) {
 			strcpy(name, "main");
@@ -1009,6 +1009,9 @@ void assignsentence() {
 			return;
 		}
 		else {
+			
+			//没有做检查
+
 			maintable.element[t].is_return = true;
 			getsym();
 			expression();
@@ -1037,11 +1040,11 @@ void assignsentence() {
 			error(FUNCTIONNOTFOUND);
 			return;
 		}
-		if (s > 0) {
+		if (s >= 0) {
 			//如果函数的实参个数与形参个数不匹配
 			if (maintable.element[s].paranum != paranum) {
 				error(FORMALPARANUMUNMATCH);
-				return;
+				getsym();
 			}
 			insmidcode("call", names, "  ", "  ");
 			int presym = symid;
@@ -1060,11 +1063,10 @@ void assignsentence() {
 			error(FUNCTIONNOTFOUND);
 			return;
 		}
-		if (s > 0) {
-			//如果函数的实参个数与形参个数不匹配
-			if (maintable.element[s].paranum != paranum) {
+		if (s >= 0) {
+			if (maintable.element[s].paranum != 0) {
 				error(FORMALPARANUMUNMATCH);
-				return;
+				getsym();
 			}
 			insmidcode("call", names, "  ", "  ");
 			int presym = symid;
@@ -1308,6 +1310,12 @@ void factor()
 					error(FUNCTIONNOTFOUND, 1);
 				return;
 			}
+
+			if (maintable.element[t].paranum != paranum) {
+				error(FORMALPARANUMUNMATCH);
+				getsym();
+			}
+
 			strcpy(place3, nextvar());//生成临时变量
 			insmidcode("call", names, "  ", place3);//将调用的返回值存放在临时变量里面
 			strcpy(nowitem, place3);
