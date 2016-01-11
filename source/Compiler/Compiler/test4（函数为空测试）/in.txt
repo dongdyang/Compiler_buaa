@@ -1,0 +1,17 @@
+const a=10;
+var b,c:char;
+procedure swap:integer;
+	var tmp:char;
+	begin
+		tmp:=b;
+		b:=c;
+		c:=tmp;
+	end
+;
+
+begin
+ read(b);
+ read(c);
+ write(" ",b);
+ write(" ",c);
+end.

@@ -1,0 +1,173 @@
+const ch=0, SIZE = 5, MAX = 100;
+var 
+	x:integer;
+	x1,x2,x3 : integer;
+	c1,c2 : char;
+	list : array[10] of integer;
+	arr:	array[7] of integer;
+	n,i:	integer;
+
+function test(a:integer):integer;
+	begin
+		if a > 1 then 
+			test := a * test(a - 1)
+		else	
+			test := a
+	end
+;
+
+procedure swap(var a,b : integer);
+var t : integer;
+begin
+	t := a;
+	a := b;
+	b := t
+end;
+	
+procedure swap2(a,b : integer);
+var t : integer;
+begin
+	t := a;
+	a := b;
+	b := t
+end;	
+
+function gcd(a,b : integer) : integer;	
+	function mod(a,b : integer) : integer;
+		begin
+			mod := a - a/b*b
+		end;
+		
+	begin
+		if a*b = 0 then
+			gcd := a+b
+		else
+			gcd := gcd(mod(a,b),mod(b,a))
+	end;
+
+
+procedure sort;
+	var
+		i,j : integer;
+	begin
+		for i := SIZE-1 downto 1 do
+			for j := 0 to i - 1 do
+				if list[j] > list[j+1] then
+				begin
+					swap(list[j],list[j+1]);
+				end
+	end;
+	
+procedure readList;
+	var
+		i,t : integer;
+	begin
+		for i := 0 to SIZE-1 do
+		begin
+			read(t);
+			list[i] := t
+		end
+	end;
+	
+procedure writeList;
+	var
+		i : integer;
+	begin
+		for i := 0 to SIZE-1 do
+		begin
+			write(" ",list[i])
+		end
+	end;	
+	
+
+procedure QuickSort(from,til:integer);
+	var ft,re:integer;
+		key:integer;
+		flag:integer;
+
+begin
+	ft := from;
+	re := til;
+	key := arr[ft];
+	
+	if ft < re then
+	begin
+		do
+		begin
+			do
+				if ft < re then
+					if arr[re] >= key then
+					begin
+						re := re - 1;
+						flag := 1
+					end
+					else
+						flag := 0
+				else 
+					flag := 0
+			while flag = 1
+			;
+			arr[ft]:=arr[re];
+			
+			do
+				if ft < re then
+					if arr[ft] <= key then
+					begin
+						ft := ft + 1;
+						flag := 1
+					end
+					else
+						flag:=0
+				else
+					flag:=0
+			while flag = 1
+			;
+			arr[re] := arr[ft];
+		end
+		while ft < re
+		;
+		
+		arr[ft] := key;
+		
+		QuickSort(from,ft-1);
+		QuickSort(ft+1,til);
+		
+	end
+	;
+end;	
+	
+	
+begin
+	write("    begin x! part: ");
+	read(x);
+	write(" x!=",test(x));
+	
+	
+	write("    begin swap part(input two number): ");
+	read(x1,x2);
+	swap2(x1,x2);
+	write("  (without var)x1:",x1);
+	write(" x2:",x2);
+	swap(x1,x2);
+	write("  (with var)x1:",x1);
+	write(" x2:",x2);
+	
+	write("   gcd test begin(input two number): ");
+	read(x1,x2);
+	write("  ",gcd(x1,x2));
+	
+	write("   bubble sort begin(input five number): ");
+	readList;
+	sort;
+	writeList;
+	
+	write("   quick sort begin(input five number): ");
+	readList;
+	sort;
+	writeList;
+	
+	
+end
+.
+
+

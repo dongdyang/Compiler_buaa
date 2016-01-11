@@ -1,0 +1,19 @@
+var 
+	t,c,t1,t2,t3,t4,a,b: integer;
+
+
+begin
+    c:=10;
+	b:=10;
+	
+
+	t:=c;
+	t2:=b*t1;
+	t3:=-c;
+	c:=b*t3;
+	t4:=t2+c;
+	a:=t4;
+end
+.
+
+

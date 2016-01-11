@@ -1,0 +1,4 @@
+﻿  opt.cpp
+d:\13061026_杨东东_mips_申优\源代码\compiler\compiler\opt.cpp(43): warning C4459: “name”的声明隐藏了全局声明
+  d:\13061026_杨东东_mips_申优\源代码\compiler\compiler\glob.h(90): note: 参见“name”的声明
+  Compiler.vcxproj -> D:\13061026_杨东东_MIPS_申优\源代码\Compiler\Debug\Compiler.exe

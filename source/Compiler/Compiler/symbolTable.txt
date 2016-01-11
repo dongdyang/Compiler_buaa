@@ -1,0 +1,11 @@
+index name kind value address paranum isVec
+------------------------
+0	t	8	0	0	0	0
+1	c	8	0	0	0	0
+2	t1	8	0	0	0	0
+3	t2	8	0	0	0	0
+4	t3	8	0	0	0	0
+5	t4	8	0	0	0	0
+6	a	8	0	0	0	0
+7	b	8	0	0	0	0
+8	main	2	0	0	0	0
